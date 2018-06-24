@@ -1,0 +1,30 @@
+
+<div class="weather-panel">
+	<div class="weather-title">
+		Best Weather Cities
+	</div>
+	<div class="weather-control">
+		<button class="weather-control-btn" ng-click="reloadWeather()">
+			Reload
+		</button>
+		
+		<span>
+			{{state.status}}
+		</span>
+
+	</div>
+	<div class="option-panel">
+		<div class="option-item-text">Show best wheater for:</div>
+		<div 
+		ng-click="selectOption(option)" 
+		ng-repeat="option in options"
+		ng-class="option.selected ? 'option-item option-item-selected' : 'option-item'"
+		>{{option.display}}</div>
+	
+	</div>
+</div>
+
+
+<div class="container">
+	<weather-detail ng-repeat="weather in weatherList" weather="weather"></weather-detail>
+</div>

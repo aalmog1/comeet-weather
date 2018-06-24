@@ -1,0 +1,61 @@
+<style>
+	
+	.weather-container {
+		border-radius: 3px;
+		border: solid 1px #cccccc;
+		padding: 5px 20px;
+		margin: 5px 20px;
+	}
+	.weather-content {
+		display: inline-block;
+		padding: 2px 5px;
+		
+	}
+	.country-name {
+		width : 20%;
+	}
+	.station-name {
+		width : 20%;
+	}
+	
+	.temprature {
+		width : 10%;
+	}
+	
+	.humidity {
+		width : 10%;
+	}
+	
+	.perfect-weather {
+	
+	}
+	
+	.good-weather {
+	
+	}
+	
+	.poor-weather {
+	
+	}
+</style>
+<div class="weather-container">   
+
+    <div class="weather-content county-name">
+                {{weather.sys.country}}
+        </div>
+        <div class="weather-content station-name">
+                {{weather.name}}
+        </div>
+        <div class="weather-content temprature">
+            <span>
+                {{weather.main.temp}}
+            </span>
+            <span>
+                &#176;
+            </span>
+        </div>
+        <div class="weather-content humidity">
+                {{weather.main.humidity}}%
+        </div>
+       
+    </div>
